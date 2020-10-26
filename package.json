@@ -1,5 +1,6 @@
 {
   "name": "githubcards",
+  "homepage":"https://jennmez.github.io/githubcards",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
