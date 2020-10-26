@@ -2,12 +2,52 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  border: 4px solid plum;
+  margin: 10px;
+  max-height: 200px;
+  width: 600px;
+  position: relative;
+  border-radius: 5px;
 }
 
 .info {
+  align-self: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  margin-left: 20px;
+}
+
+.img-resize {
+  max-width: 300px;
+  max-height: 200px;
+  margin-right: 20px;
+  /* justify-self: flex-start; */
+}
+img {
+  /* position: absolute;
+  max-width: 100%; */
+  object-fit: contain;
+  max-width: 50%;
+  max-height: 50%;
+  /* max-height: auto; */
+}
+
+.login {
+  color: plum;
+  font-weight: 700;
+}
+
+.name {
+  font-weight: 700;
+  padding: 4px 0px;
+}
+
+.location {
+  padding: 4px 0px;
+}
+
+.public-repos {
+  padding: 4px 0px;
 }
