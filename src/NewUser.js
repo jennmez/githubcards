@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './NewUser.css';
 
 class NewUser extends React.Component {
   constructor(props) {
@@ -24,7 +25,6 @@ class NewUser extends React.Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <form onSubmit={this.handleSubmit}>
         <input

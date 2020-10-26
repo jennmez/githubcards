@@ -1,6 +1,7 @@
 import React from 'react';
 import CardList from './CardList';
 import NewUser from './NewUser';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,9 +20,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <div className="header">{this.props.title}</div>
-        <NewUser onSubmit={this.addNewProfile} />
-        <CardList profiles={this.state.profiles} />
+        <div className="container">
+          <div className="header">{this.props.title}</div>
+          <NewUser onSubmit={this.addNewProfile} />
+          <CardList profiles={this.state.profiles} />
+        </div>
       </>
     );
   }
