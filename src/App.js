@@ -11,10 +11,16 @@ class App extends React.Component {
     };
   }
   addNewProfile = (profileData) => {
-    console.log('hello');
     this.setState((prevState) => ({
       profiles: [...prevState.profiles, profileData],
     }));
+  };
+
+  deleteProfile = (userProfile) => {
+    let filteredProfiles = this.state.profiles.filter(
+      (profile) => profile.id !== userProfile.id
+    );
+    this.setState({ profiles: filteredProfiles });
   };
 
   render() {
@@ -23,7 +29,10 @@ class App extends React.Component {
         <div className="container">
           <div className="header">{this.props.title}</div>
           <NewUser onSubmit={this.addNewProfile} />
-          <CardList profiles={this.state.profiles} />
+          <CardList
+            profiles={this.state.profiles}
+            onDelete={this.deleteProfile}
+          />
         </div>
       </>
     );

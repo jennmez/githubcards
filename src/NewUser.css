@@ -6,7 +6,7 @@ input {
   padding: 10px 20px;
   border-radius: 5px;
 }
-button {
+.add {
   text-align: center;
   font-size: calc(14px + 2vmin);
   background-color: plum;
@@ -17,6 +17,6 @@ button {
   margin: 4px 10px;
 }
 
-button:hover {
+.add:hover {
   background-color: rgb(255, 204, 255);
 }

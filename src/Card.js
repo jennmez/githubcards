@@ -4,12 +4,15 @@ import './Card.css';
 class Card extends React.Component {
   render() {
     const profile = this.props;
-    console.log(profile);
+    const onDelete = this.props.onDelete;
+
     return (
       <div className="github-profile">
-        {/* <div className="img-resize"> */}
-        <img className="img-resize" src={profile.avatar_url} />
-        {/* </div> */}
+        <img
+          alt="user profile"
+          className="img-resize"
+          src={profile.avatar_url}
+        />
         <div className="info">
           <div className="login">{profile.login}</div>
           {profile.name ? (
@@ -26,6 +29,9 @@ class Card extends React.Component {
             Public Repos: {profile.public_repos}
           </div>
         </div>
+        <button onClick={() => onDelete(profile)} className="delete">
+          X
+        </button>
       </div>
     );
   }

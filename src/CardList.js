@@ -3,11 +3,12 @@ import Card from './Card';
 
 class CardList extends React.Component {
   render() {
-    const { profiles } = this.props;
+    const { profiles, onDelete } = this.props;
+    console.log(profiles);
     return (
       <div>
         {profiles.map((profile) => (
-          <Card key={profile.id} {...profile} />
+          <Card key={profile.id} {...profile} onDelete={onDelete} />
         ))}
       </div>
     );

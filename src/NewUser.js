@@ -34,7 +34,7 @@ class NewUser extends React.Component {
           onChange={this.handleChange}
           required
         />
-        <button>Add card</button>
+        <button className="add">Add card</button>
       </form>
     );
   }
